@@ -3,299 +3,91 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f3efe5">
-<meta name="description" content="Rajwinder Singh — Commis 1 Continental Chef. A portfolio of kitchen experience, skills and original food creations.">
-<title>Rajwinder Singh — Chef Portfolio</title>
+<meta name="theme-color" content="#100d09">
+<meta name="description" content="Rajwinder Singh — Commis 1 Continental Chef. Explore culinary work, professional experience, kitchen skills and education.">
+<title>Rajwinder Singh | Continental Chef</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{
- --paper:#f3efe5;--ink:#172b2a;--muted:#66736d;--lime:#d8f36a;--orange:#ef7048;
- --line:rgba(23,43,42,.2);--card:#fffdf7;--display:"Playfair Display",Georgia,serif;
- --sans:"DM Sans",Arial,sans-serif;--mono:"DM Mono",monospace;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:86px}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-button,input,textarea{font:inherit}
-::selection{background:var(--lime);color:var(--ink)}
-.wrap{width:min(1240px,calc(100% - 64px));margin-inline:auto}
-.site-nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:20}
-.brand{font-size:.88rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-.brand b{color:var(--orange)}
-.nav-links{display:flex;align-items:center;gap:clamp(16px,2.5vw,34px);font-size:.82rem;font-weight:700}
-.nav-links a{padding:10px 0;position:relative}
-.nav-links a:after{content:"";position:absolute;left:0;bottom:3px;width:0;height:2px;background:var(--orange);transition:width .25s}
-.nav-links a:hover:after{width:100%}
-.menu-btn{display:none;border:1px solid var(--line);background:transparent;border-radius:99px;padding:10px 14px;color:var(--ink)}
-.kicker{font:500 .72rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
-.hero{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:clamp(35px,6vw,90px);align-items:center;padding:clamp(64px,9vw,125px) 0 105px;min-height:690px}
-.hero:before{content:"CHEF";position:absolute;right:-.03em;top:18px;font-size:clamp(8rem,22vw,20rem);font-weight:800;letter-spacing:-.11em;line-height:1;color:rgba(23,43,42,.035);pointer-events:none;z-index:0}
-.hero-copy,.hero-visual{position:relative;z-index:1;min-width:0}
-.hero h1{font-size:clamp(4.4rem,9.6vw,9.2rem);line-height:.82;letter-spacing:-.095em;margin:24px 0 28px;font-weight:800;max-width:800px}
-.hero h1 span{display:block}
-.hero h1 em{font-family:var(--display);font-weight:600;color:var(--orange);letter-spacing:-.075em}
-.hero-intro{max-width:570px;font-size:clamp(1rem,1.35vw,1.16rem);line-height:1.8;color:#485b55}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border:1px solid var(--ink);border-radius:999px;font-size:.83rem;font-weight:800;transition:transform .2s,background .2s}
-.button:hover{transform:translateY(-3px)}
-.button.primary{background:var(--ink);color:var(--paper)}
-.button.primary:hover{background:var(--orange);border-color:var(--orange);color:#fff}
-.hero-note{font: .68rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:38px}
-.hero-visual{min-height:490px;display:grid;place-items:center}
-.portrait-shell{width:min(100%,390px);aspect-ratio:.78;padding:9px;background:linear-gradient(145deg,var(--orange),var(--lime));border-radius:48% 48% 22px 22px;transform:rotate(3deg);box-shadow:22px 26px 0 rgba(23,43,42,.08);position:relative}
-.portrait-shell img{width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:inherit;filter:saturate(.9)}
-.stamp{position:absolute;right:-42px;top:12%;width:112px;height:112px;border-radius:50%;background:var(--lime);display:grid;place-items:center;text-align:center;font:500 .65rem var(--mono);letter-spacing:.06em;text-transform:uppercase;line-height:1.5;transform:rotate(12deg);border:1px solid var(--ink)}
-.float-note{position:absolute;left:-42px;bottom:10%;background:var(--card);border:1px solid var(--line);padding:14px 17px;max-width:190px;box-shadow:7px 7px 0 var(--lime);font-size:.8rem;line-height:1.45}
-.float-note strong{display:block;font-size:.95rem;margin-bottom:3px}
-.marquee{background:var(--lime);color:var(--ink);overflow:hidden;border-block:1px solid var(--ink);padding:14px 0}
-.marquee-track{display:flex;gap:32px;white-space:nowrap;width:max-content;animation:marquee 28s linear infinite;font:500 .75rem var(--mono);letter-spacing:.15em;text-transform:uppercase}
-.marquee-track span:after{content:"✳";padding-left:32px;color:var(--orange)}
-.section{padding:clamp(76px,9vw,120px) 0;border-bottom:1px solid var(--line)}
-.section-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
-.section-title{font-size:clamp(3rem,6.8vw,6.6rem);line-height:.9;letter-spacing:-.08em;margin:14px 0 0;font-weight:800}
-.section-title em{font-family:var(--display);font-weight:600;color:var(--orange);letter-spacing:-.07em}
-.section-summary{max-width:410px;color:var(--muted);line-height:1.8;margin:0 0 4px}
-.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.about-card{background:var(--card);border:1px solid var(--line);border-radius:4px 24px 24px 24px;padding:25px;min-height:225px;transition:transform .25s}
-.about-card:hover{transform:translateY(-6px) rotate(-.5deg)}
-.card-symbol{font-size:2rem;color:var(--orange);margin-bottom:28px}
-.about-card h3{font-size:1.18rem;margin:0 0 9px}
-.about-card p{font-size:.9rem;line-height:1.75;color:var(--muted);margin:0}
-.food-section{background:#1a302e;color:var(--paper);position:relative;overflow:hidden}
-.food-section:before{content:"MADE";position:absolute;right:-.04em;top:30px;font-size:clamp(8rem,24vw,22rem);font-weight:800;letter-spacing:-.12em;color:rgba(243,239,229,.035);pointer-events:none}
-.food-section .kicker{color:var(--lime)}
-.food-section .section-title em{color:var(--lime)}
-.food-section .section-summary{color:#b7c5bd}
-.food-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
-.food-card{grid-column:span 6;min-width:0;position:relative;background:#243d39;border:1px solid rgba(243,239,229,.2);overflow:hidden}
-.food-card:nth-child(1),.food-card:nth-child(4){grid-column:span 7}
-.food-card:nth-child(2),.food-card:nth-child(3){grid-column:span 5}
-.food-card{transition:transform 3s ease,box-shadow 3s ease,border-color 3s ease}
-.food-image{height:clamp(250px,35vw,430px);overflow:hidden;background:#142724;display:grid;place-items:center}
-.food-image img{width:100%;height:100%;object-fit:contain;object-position:center;transition:transform 3s ease,filter 3s ease}
-.food-card:hover{transform:translateY(-7px);box-shadow:0 18px 38px rgba(0,0,0,.24);border-color:var(--lime)}
-.food-card:hover .food-image img{transform:scale(1.025);filter:saturate(1.08)}
-.food-meta{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:17px 19px;transition:background-color 3s ease}
-.food-meta h3{font:600 clamp(1.25rem,2.2vw,2rem) var(--display);margin:0;transition:color 3s ease}
-.food-meta span{font: .65rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--lime);white-space:nowrap}
-.food-caption{padding:0 19px 18px;color:#b7c5bd;font-size:.82rem;line-height:1.6;margin:0;transition:color 3s ease}
-.food-card:hover .food-meta{background:rgba(216,243,106,.07)}
-.food-card:hover .food-meta h3{color:var(--lime)}
-.food-card:hover .food-caption{color:#f3efe5}
-.timeline{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.job{background:var(--card);border:1px solid var(--line);padding:25px 26px;border-radius:4px 22px 22px 22px;min-width:0}
-.job-date{font: .68rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
-.job h3{font-size:1.28rem;margin:12px 0 4px}
-.job-place{color:var(--muted);font-size:.9rem}
-.job ul{padding-left:19px;color:#53645d;line-height:1.8;font-size:.88rem;margin:17px 0 0}
-.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}
-.skill-list{display:flex;flex-wrap:wrap;gap:10px}
-.chip{padding:11px 15px;border:1px solid rgba(23,43,42,.28);border-radius:99px;background:rgba(255,255,255,.36);font-size:.84rem;font-weight:600}
-.language-label{font: .68rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:34px 0 13px}
-.education-list{display:grid;gap:14px}
-.edu{border-left:3px solid var(--orange);padding:7px 0 9px 20px}
-.edu h3{font-size:1.05rem;margin:0 0 6px}
-.edu p{font-size:.88rem;line-height:1.65;color:var(--muted);margin:0}
-.contact-panel{background:var(--lime);color:var(--ink);padding:clamp(25px,5vw,58px);display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;border-radius:4px 30px 30px 30px}
-.contact-panel .kicker{color:#4b5c39}
-.contact-panel h2{font-size:clamp(3rem,6vw,6rem);line-height:.88;letter-spacing:-.08em;margin:17px 0}
-.contact-panel h2 em{font-family:var(--display);font-weight:600}
-.contact-panel p{line-height:1.7;max-width:390px}
-.contact-details{font: .8rem var(--mono);line-height:1.9;overflow-wrap:anywhere}
-.contact-form{display:grid;gap:14px;min-width:0}
-.field{display:grid;gap:7px}
-.field label{font:500 .68rem var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.field input,.field textarea{width:100%;min-width:0;border:1px solid rgba(23,43,42,.55);background:rgba(255,255,255,.68);color:var(--ink);border-radius:12px;padding:15px 16px;outline:none;transition:border .2s,box-shadow .2s}
-.field input:focus,.field textarea:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(23,43,42,.13)}
-.field textarea{min-height:125px;resize:vertical}
-.form-submit{border:0;background:var(--ink);color:var(--paper);border-radius:999px;padding:15px 20px;font-weight:800;cursor:pointer;justify-self:start}
-.form-submit:hover{background:var(--orange)}
-.form-hint{font-size:.75rem;color:#52614b;line-height:1.5;margin:0}
-footer{padding:25px 0;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font: .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
-.reveal.visible{opacity:1;transform:none}
-@keyframes marquee{to{transform:translateX(-50%)}}
-@media(max-width:850px){
- .wrap{width:min(100% - 42px,680px)}
- .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);border:1px solid var(--line);padding:18px;border-radius:16px;flex-direction:column;align-items:stretch;gap:8px;box-shadow:0 18px 35px rgba(23,43,42,.12)}
- .nav-links.open{display:flex}.nav-links a{padding:12px}
- .menu-btn{display:block}
- .hero{grid-template-columns:1fr;gap:45px;padding:68px 0 75px;min-height:0}
- .hero-copy{order:1}.hero-visual{order:0;min-height:390px}
- .hero h1{font-size:clamp(4.5rem,14vw,7rem)}
- .portrait-shell{width:min(68%,330px)}
- .section-top{align-items:start;flex-direction:column}
- .about-grid{grid-template-columns:1fr 1fr}
- .split{grid-template-columns:1fr;gap:30px}
- .contact-panel{grid-template-columns:1fr;gap:25px}
-}
-@media(max-width:560px){
- .wrap{width:calc(100% - 32px)}
- .site-nav{height:70px}
- .hero{padding-top:42px}
- .hero h1{font-size:clamp(3.65rem,16vw,5.4rem);line-height:.88}
- .hero-visual{min-height:330px}
- .portrait-shell{width:min(70%,260px)}
- .stamp{width:86px;height:86px;right:-25px;font-size:.55rem}
- .float-note{left:-12px;bottom:4%;max-width:155px;font-size:.7rem;padding:11px}
- .hero-intro{font-size:.96rem}
- .hero-actions .button{width:100%}
- .section{padding:66px 0}
- .section-title{font-size:clamp(2.8rem,13vw,4.5rem)}
- .about-grid,.timeline{grid-template-columns:1fr}
- .about-card{min-height:0}
- .food-grid{grid-template-columns:1fr;gap:16px}
- .food-card,.food-card:nth-child(n){grid-column:1}
- .food-image{height:300px}
- .food-meta{align-items:flex-start;flex-direction:column;gap:6px}
- .contact-panel{padding:25px 20px}
- .field input,.field textarea{font-size:16px}
- footer{flex-direction:column}
-}
-@media(prefers-reduced-motion:reduce){
- *,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
- .reveal{opacity:1;transform:none}
-}
-
-/* FINAL FOOD PHOTO SIZING — compact centered portrait images */
-.food-image{
-  height:clamp(230px, 27vw, 320px) !important;
-  aspect-ratio:auto !important;
-  min-height:0 !important;
-  padding:12px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:hidden !important;
-  background:#142724 !important;
-}
-.food-image img{
-  display:block !important;
-  width:auto !important;
-  height:100% !important;
-  max-width:100% !important;
-  max-height:100% !important;
-  object-fit:contain !important;
-  object-position:center center !important;
-  transform:none !important;
-  filter:none !important;
-  transition:filter 3s ease !important;
-}
-.food-card:hover .food-image img{
-  transform:none !important;
-  filter:saturate(1.08) !important;
-}
-.food-card,
-.food-meta,
-.food-meta h3,
-.food-caption{
-  transition-duration:3s !important;
-}
-@media(max-width:560px){
-  .food-image{height:260px !important}
-}
+:root{--bg:#100d09;--panel:#19140e;--panel2:#211a11;--gold:#e8b64f;--gold2:#f6d17b;--cream:#f5efe3;--muted:#c2b8a7;--line:#d8ad5540;--sans:"DM Sans",Arial,sans-serif;--serif:"Playfair Display",Georgia,serif;--mono:"DM Mono",monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--sans);overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(1240px,calc(100% - 52px));margin:auto}
+header{height:76px;background:#090806eF;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(14px)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;min-width:max-content}.brand-mark{width:42px;height:42px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:22px}.brand-name{font-family:var(--serif);font-weight:700;font-size:1.05rem;line-height:1.1}.brand-name small{display:block;color:var(--gold);font: .63rem var(--mono);letter-spacing:.04em;margin-top:4px}.navlinks{display:flex;align-items:center;gap:clamp(13px,2vw,27px);font-size:.76rem;font-weight:600;color:#e9dfcd}.navlinks a{padding:8px 0;border-bottom:1px solid transparent}.navlinks a:hover{color:var(--gold2);border-color:var(--gold)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--gold);border-radius:99px;padding:11px 19px;color:var(--gold2);font-size:.78rem;font-weight:700;transition:.25s}.nav-cta:hover,.btn:hover{background:var(--gold);color:#171006;transform:translateY(-2px)}.menu{display:none;background:transparent;color:var(--cream);border:1px solid var(--line);border-radius:30px;padding:9px 13px}
+.hero{min-height:510px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 78% 50%,#6a472b42,transparent 48%),linear-gradient(90deg,#100d09 0%,#100d09 48%,#1d160e 100%)}
+.hero-copy{padding:70px 0 66px;position:relative;z-index:2}.eyebrow{font: .68rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}.hero h1{font:700 clamp(3.4rem,6.2vw,6.7rem)/.96 var(--serif);letter-spacing:-.055em;margin:19px 0 13px;max-width:700px}.hero h1 span{display:block}.hero-tag{font:italic 600 clamp(1.15rem,2vw,1.75rem) var(--serif);color:var(--gold);margin:0 0 23px}.gold-rule{width:70px;height:2px;background:var(--gold);margin:22px 0}.hero-desc{max-width:530px;color:#ded4c3;font-size:.94rem;line-height:1.75}.hero-meta{display:flex;gap:15px;flex-wrap:wrap;margin:23px 0;color:#e8dece;font-size:.83rem}.hero-meta span{display:inline-flex;align-items:center;gap:8px}.pin{color:var(--gold);font-size:1.1rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn.primary{background:var(--gold);color:#1a1208}.hero-visual{height:100%;min-height:510px;display:flex;align-items:center;justify-content:center;position:relative;padding:0}.hero-visual:before{content:"";position:absolute;width:min(88%,470px);aspect-ratio:1;border:1px solid #e8b64f66;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 20px #e8b64f0a,0 0 0 42px #e8b64f08}.hero-visual img{position:relative;z-index:1;width:min(76%,390px);height:min(76vw,390px);max-height:390px;aspect-ratio:1;object-fit:contain;object-position:center center;border-radius:50%;filter:drop-shadow(0 18px 24px #0009);border:1px solid #e8b64f55}.hero-note{position:absolute;right:0;top:25%;z-index:2;font:italic 1.35rem var(--serif);color:var(--gold2);transform:rotate(-8deg);text-align:center}
+section{border-bottom:1px solid var(--line)}.section{padding:55px 0}.section-kicker{font: .65rem var(--mono);letter-spacing:.15em;color:var(--gold);text-transform:uppercase}.section-title{font:600 clamp(1.8rem,3vw,2.55rem)/1.1 var(--serif);margin:9px 0 14px}.section-title span{display:inline-block;width:55px;height:1px;background:var(--gold);vertical-align:middle;margin-left:12px}.muted{color:var(--muted);line-height:1.75;font-size:.86rem}
+.about-experience{display:grid;grid-template-columns:.95fr 1.2fr;gap:34px;align-items:stretch}.about-panel{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center;padding-right:28px;border-right:1px solid var(--line)}.about-photo{width:145px;height:175px;object-fit:cover;object-position:center;border:2px solid var(--gold);border-radius:90px 90px 16px 16px}.about-panel p{margin:0}.mini-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.mini-tag{font-size:.67rem;color:var(--gold2);border:1px solid var(--line);padding:7px 9px;border-radius:30px}
+.experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.job{padding:17px 18px;background:linear-gradient(135deg,#21190f,#15110c);border:1px solid var(--line);border-radius:8px}.job-date{font: .64rem var(--mono);color:var(--gold);letter-spacing:.04em}.job h3{font:600 1.1rem var(--serif);margin:9px 0 4px}.job-place{font-size:.77rem;color:var(--gold2);margin-bottom:10px}.job ul{margin:0;padding-left:16px;color:#c9beac;font-size:.72rem;line-height:1.65}.job li::marker{color:var(--gold)}
+.food-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}.food-intro{max-width:350px;margin:0}.food-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.food-card{background:#19140e;border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:transform .35s,border-color .35s}.food-card:hover{transform:translateY(-5px);border-color:var(--gold)}.food-image{height:225px;padding:8px;background:#0d0b08;display:flex;align-items:center;justify-content:center;overflow:hidden}.food-image img{width:100%;height:100%;object-fit:contain;object-position:center;transition:filter .4s}.food-card:hover img{filter:saturate(1.12)}.food-info{padding:12px 13px 15px}.food-info h3{font:600 1rem var(--serif);margin:0 0 5px}.food-info p{color:var(--muted);font-size:.69rem;line-height:1.55;margin:0}.food-info small{font: .58rem var(--mono);color:var(--gold);letter-spacing:.12em;text-transform:uppercase}
+.lower-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px}.lower-col{padding-right:24px;border-right:1px solid var(--line)}.lower-col:last-child{border:0;padding-right:0}.lower-title{display:flex;align-items:center;gap:12px;margin-bottom:18px}.lower-icon{font-size:1.5rem;color:var(--gold)}.lower-title h2{font:600 1.35rem var(--serif);margin:0}.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 15px}.check{font-size:.75rem;color:#ddd2c0;display:flex;gap:8px;align-items:flex-start;line-height:1.5}.check b{color:var(--gold);font-size:.95rem;line-height:1}.skill-list{display:flex;flex-direction:column;gap:10px}.skill{font-size:.76rem;color:#ddd2c0;display:flex;gap:9px}.skill:before{content:"✓";color:var(--gold);font-weight:700}.edu-item{margin-bottom:15px}.edu-item h3{font:600 1rem var(--serif);margin:0 0 4px}.edu-item p{font-size:.74rem;color:var(--muted);line-height:1.6;margin:0}.edu-item .year{font: .62rem var(--mono);color:var(--gold)}
+.contact-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:24px 0}.contact-item{display:flex;align-items:center;gap:11px;color:#e6dccb;font-size:.8rem}.contact-item strong{color:var(--gold);font-size:1.25rem}.contact-item a:hover{color:var(--gold)}.footer{border-top:1px solid var(--line);padding:18px 0 25px;display:flex;justify-content:space-between;gap:15px;color:#9e9586;font: .61rem var(--mono);letter-spacing:.09em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .65s,transform .65s}.reveal.show{opacity:1;transform:none}
+@media(max-width:980px){.navlinks{gap:12px;font-size:.7rem}.nav-cta{display:none}.about-experience{grid-template-columns:1fr}.about-panel{border-right:0;border-bottom:1px solid var(--line);padding:0 0 25px}.food-grid{grid-template-columns:repeat(2,1fr)}.lower-grid{grid-template-columns:1fr 1fr}.lower-col:nth-child(2){border:0}.lower-col:last-child{grid-column:1/-1;border-top:1px solid var(--line);padding:22px 0 0}.hero-visual{min-height:440px}.hero-visual img{width:min(76%,350px);height:min(76vw,350px)}}
+@media(max-width:700px){.wrap{width:calc(100% - 34px)}header{height:68px}.navlinks{display:none;position:absolute;top:67px;left:0;right:0;background:#100d09;border:1px solid var(--line);border-radius:0 0 14px 14px;padding:15px;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:10px}.menu{display:block}.hero{grid-template-columns:1fr}.hero-copy{padding:58px 0 8px}.hero-visual{min-height:320px;height:320px;padding:0}.hero-visual img{height:230px;width:230px;max-height:230px}.hero-visual:before{width:270px;height:270px;top:50%;left:50%;transform:translate(-50%,-50%)}.hero-note{right:4%;top:17%;font-size:1rem}.section{padding:42px 0}.experience-grid{grid-template-columns:1fr}.about-panel{grid-template-columns:105px 1fr;gap:15px}.about-photo{width:102px;height:130px}.food-head{align-items:start;flex-direction:column}.food-image{height:190px}.lower-grid{grid-template-columns:1fr}.lower-col,.lower-col:nth-child(2),.lower-col:last-child{grid-column:auto;border-right:0;border-bottom:1px solid var(--line);padding:0 0 22px}.lower-col:last-child{border:0}.contact-bar{align-items:flex-start;flex-direction:column;gap:14px}.footer{flex-direction:column}}
+@media(max-width:420px){.food-grid{grid-template-columns:1fr 1fr;gap:9px}.food-image{height:155px;padding:5px}.food-info{padding:10px}.food-info h3{font-size:.9rem}.check-grid{grid-template-columns:1fr}.hero h1{font-size:3.1rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<header class="wrap site-nav">
- <a class="brand" href="#home">RAJWINDER<b>.</b></a>
- <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">Menu ☰</button>
- <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-  <a href="#about">About</a><a href="#food">My food</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
- </nav>
-</header>
-<main id="home">
-<section class="wrap hero">
- <div class="hero-copy">
-  <div class="kicker">Commis 1 · Continental Chef · Hospitality</div>
-  <h1><span>Cooking</span><span>with <em>character.</em></span></h1>
-  <p class="hero-intro">I'm Rajwinder Singh, a Commis 1 Continental Chef with experience in hotel kitchens and airline catering operations. I focus on careful preparation, consistent recipes, food quality, hygiene and teamwork in fast-paced kitchen environments.</p>
-  <div class="hero-actions"><a class="button primary" href="#food">Explore my food ↗</a><a class="button" href="#contact">Get in touch</a></div>
-  <p class="hero-note">A little craft. A lot of flavour. · Bengaluru, India</p>
- </div>
- <div class="hero-visual">
-  <div class="portrait-shell"><img src="assets/rajwinder-portrait.jpg" alt="Portrait of chef Rajwinder Singh"></div>
-  <div class="stamp">Continental<br>kitchen<br>craft ✳</div>
-  <div class="float-note"><strong>Hotel + airline</strong>Kitchen operations and food preparation</div>
- </div>
-</section>
-<div class="marquee" aria-label="Portfolio highlights"><div class="marquee-track"><span>Continental cuisine</span><span>Mise en place</span><span>Food quality</span><span>Kitchen discipline</span><span>Continental cuisine</span><span>Mise en place</span><span>Food quality</span><span>Kitchen discipline</span></div></div>
-
-<section class="section" id="about"><div class="wrap reveal">
- <div class="section-top"><div><div class="kicker">01 / About me</div><h2 class="section-title">Good food<br>starts with <em>craft.</em></h2></div><p class="section-summary">Professional kitchen experience, a learning mindset, and care for every detail—from mise en place to safe, consistent food production.</p></div>
- <div class="about-grid">
-  <article class="about-card"><div class="card-symbol">✳</div><h3>Food quality</h3><p>Follow standard recipes, portion requirements and food quality expectations during preparation and service.</p></article>
-  <article class="about-card"><div class="card-symbol">◈</div><h3>Food safety first</h3><p>Maintain personal hygiene, clean workstations and sanitation procedures in line with kitchen standards.</p></article>
-  <article class="about-card"><div class="card-symbol">↗</div><h3>Teamwork & growth</h3><p>Work with kitchen colleagues to support daily production and efficient operations in busy environments.</p></article>
- </div>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="brand-mark">♨</span><span class="brand-name">Rajwinder Singh<small>COMMIS 1 · CONTINENTAL CHEF</small></span></a>
+<nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#food">My Food</a><a href="#safety">Food Safety</a><a href="#skills">Skills & Education</a><a href="#contact">Contact</a></nav>
+<button class="menu" id="menu" aria-expanded="false">Menu ☰</button>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap" style="display:contents">
+<div class="hero-copy wrap">
+<div class="eyebrow">Commis 1 · Continental Chef · Hospitality</div>
+<h1><span>CONTINENTAL</span><span>CHEF</span></h1>
+<p class="hero-tag">Cooking with character.</p><div class="gold-rule"></div>
+<p class="hero-desc">I'm Rajwinder Singh, a Commis 1 Continental Chef with experience in hotel kitchens and airline catering operations. I focus on careful preparation, consistent recipes, food quality, hygiene and teamwork in fast-paced kitchen environments.</p>
+<div class="hero-meta"><span><b class="pin">◆</b> Commis 1 Continental Chef</span><span>│</span><span>Bengaluru Airport · India</span></div>
+<div class="hero-actions"><a class="btn primary" href="#food">Explore My Food →</a><a class="btn" href="#contact">Contact Me</a></div>
+</div>
+<div class="hero-visual"><img src="assets/rajwinder-portrait.jpg" alt="Portrait of Rajwinder Singh"><div class="hero-note">Good Food<br>Good Mood</div></div>
 </div></section>
 
-<section class="section food-section" id="food"><div class="wrap reveal">
- <div class="section-top"><div><div class="kicker">02 / From my kitchen</div><h2 class="section-title">Made by <em>me.</em></h2></div><p class="section-summary">A selection of food photographs supplied for this portfolio. Each dish is presented as part of my personal kitchen work.</p></div>
- <div class="food-grid">
-  <article class="food-card"><div class="food-image"><img src="assets/pizza-margherita.jpg?v=3" alt="Cheese pizza topped with fresh basil" loading="lazy"></div><div class="food-meta"><h3>Cheese & basil pizza</h3><span>01 / Pizza</span></div><p class="food-caption">Golden melted cheese, tomato base and fresh basil.</p></article>
-  <article class="food-card"><div class="food-image"><img src="assets/vegetable-ratatouille.jpg?v=3" alt="Layered baked vegetable dish" loading="lazy"></div><div class="food-meta"><h3>Layered vegetable bake</h3><span>02 / Vegetables</span></div><p class="food-caption">A colourful arrangement of sliced vegetables with herbs and sauce.</p></article>
-  <article class="food-card"><div class="food-image"><img src="assets/pink-sauce-pasta.jpg?v=3" alt="Pasta served in creamy pink sauce with herbs and garlic bread" loading="lazy"></div><div class="food-meta"><h3>Pink sauce pasta</h3><span>03 / Pasta</span></div><p class="food-caption">Creamy pink sauce pasta finished with herbs and served with toasted bread.</p></article>
-  <article class="food-card"><div class="food-image"><img src="assets/fresh-fruit-platter.jpg?v=3" alt="Fresh fruit and cheese platter" loading="lazy"></div><div class="food-meta"><h3>Fresh fruit platter</h3><span>04 / Plating</span></div><p class="food-caption">A fresh platter with neatly arranged fruit and cheese.</p></article>
- </div>
-</div></section>
+<section id="about"><div class="wrap section reveal"><div class="about-experience">
+<div class="about-panel"><img class="about-photo" src="assets/rajwinder-portrait.jpg" alt="Rajwinder Singh"><div><div class="section-kicker">01 / About me</div><h2 class="section-title">Good food<br>starts with craft.</h2><p class="muted">Professional kitchen experience, a learning mindset, and care for every detail—from mise en place to safe, consistent food production.</p><div class="mini-tags"><span class="mini-tag">Continental cuisine</span><span class="mini-tag">Food quality</span><span class="mini-tag">Teamwork</span></div></div></div>
+<div id="experience"><div class="section-kicker">02 / Career journey</div><h2 class="section-title">Professional Experience <span></span></h2><div class="experience-grid">
+<article class="job"><div class="job-date">10 OCT 2026 – PRESENT</div><h3>Commis 1 Continental Chef</h3><div class="job-place">LSG Sky Chefs · Bengaluru Airport</div><ul><li>Support Continental kitchen preparation and daily food production.</li><li>Follow recipes, portion standards and food quality requirements.</li><li>Maintain kitchen hygiene and food safety procedures.</li><li>Work with the team to support efficient kitchen operations.</li></ul></article>
+<article class="job"><div class="job-date">01 JUN 2023 – 21 SEP 2026</div><h3>Commis 1</h3><div class="job-place">Grand Mercure Bangalore</div><ul><li>Prepared mise en place for Continental cuisine.</li><li>Assisted with food preparation and cooking while maintaining consistency.</li><li>Operated fryers, grills, combi ovens, pizza ovens, deep freezers and tawa.</li><li>Maintained clean and sanitized work areas.</li></ul></article>
+<article class="job"><div class="job-date">20 SEP 2022 – 19 JAN 2023</div><h3>Hotel Internship</h3><div class="job-place">Grand Mercure Bangalore</div><ul><li>Completed a four-month internship.</li><li>Department details are not specified in the current portfolio.</li></ul></article>
+<article class="job"><div class="job-date">3 MONTHS · COVID-19 PERIOD</div><h3>Hotel Internship</h3><div class="job-place">Grand Mercure Mysore</div><ul><li>Participated in an internship during the COVID-19 period.</li><li>Training was interrupted when trainees were sent home.</li></ul></article>
+</div></div>
+</div></div></section>
 
-<section class="section" id="experience"><div class="wrap reveal">
- <div class="section-top"><div><div class="kicker">03 / Career journey</div><h2 class="section-title">Time spent<br>in the <em>kitchen.</em></h2></div><p class="section-summary">Airline catering and hotel kitchen operations, with experience in Continental preparation, equipment use and hygiene standards.</p></div>
- <div class="timeline">
-  <article class="job"><div class="job-date">10 Oct 2026 – Present</div><h3>Commis 1 Continental Chef</h3><div class="job-place">LSG Sky Chefs · Bengaluru Airport</div><ul><li>Support Continental kitchen preparation and daily food production.</li><li>Follow recipes, portion standards and food quality requirements.</li><li>Maintain kitchen hygiene and food safety procedures.</li><li>Work with the team to support efficient kitchen operations.</li></ul></article>
-  <article class="job"><div class="job-date">1 Jun 2023 – 21 Sep 2026</div><h3>Commis 1</h3><div class="job-place">Grand Mercure Bangalore</div><ul><li>Prepared mise en place for Continental cuisine.</li><li>Assisted with food preparation and cooking while maintaining consistency.</li><li>Operated fryers, grills, combi ovens, pizza ovens, deep freezers and tawa.</li><li>Maintained clean and sanitized work areas.</li></ul></article>
-  <article class="job"><div class="job-date">20 Sep 2022 – 19 Jan 2023</div><h3>Hotel Internship</h3><div class="job-place">Grand Mercure Bangalore</div><ul><li>Completed a four-month internship.</li><li>Department details are not specified in the current resume.</li></ul></article>
-  <article class="job"><div class="job-date">3 months · COVID-19 period</div><h3>Hotel Internship</h3><div class="job-place">Grand Mercure Mysore</div><ul><li>Participated in an internship during the COVID-19 period.</li><li>The training was interrupted when trainees were sent home; exact dates were not provided.</li></ul></article>
- </div>
-</div></section>
+<section id="food"><div class="wrap section reveal"><div class="food-head"><div><div class="section-kicker">03 / From my kitchen</div><h2 class="section-title">Made by me. <span></span></h2></div><p class="muted food-intro">A selection of food photographs supplied for this portfolio. Each dish is presented as part of my personal kitchen work.</p></div>
+<div class="food-grid">
+<article class="food-card"><div class="food-image"><img src="assets/pizza-margherita.jpg" alt="Cheese and basil pizza"></div><div class="food-info"><small>01 / Pizza</small><h3>Cheese & basil pizza</h3><p>Golden melted cheese, tomato base and fresh basil.</p></div></article>
+<article class="food-card"><div class="food-image"><img src="assets/vegetable-ratatouille.jpg" alt="Layered baked vegetable dish"></div><div class="food-info"><small>02 / Vegetables</small><h3>Layered vegetable bake</h3><p>A colourful arrangement of sliced vegetables with herbs and sauce.</p></div></article>
+<article class="food-card"><div class="food-image"><img src="assets/pink-sauce-pasta.jpg" alt="Pasta in creamy pink sauce with garlic bread"></div><div class="food-info"><small>03 / Pasta</small><h3>Pink sauce pasta</h3><p>Creamy pink sauce pasta finished with herbs and toasted bread.</p></div></article>
+<article class="food-card"><div class="food-image"><img src="assets/fresh-fruit-platter.jpg" alt="Fresh fruit and cheese platter"></div><div class="food-info"><small>04 / Plating</small><h3>Fresh fruit platter</h3><p>A fresh platter with neatly arranged fruit and cheese.</p></div></article>
+</div></div></section>
 
-<section class="section" id="skills"><div class="wrap split reveal">
- <div><div class="kicker">04 / Core strengths</div><h2 class="section-title">Skills with<br><em>purpose.</em></h2><p class="section-summary">A practical mix of Continental kitchen fundamentals, food-safety knowledge and disciplined execution in a professional kitchen.</p></div>
- <div><div class="skill-list"><span class="chip">Continental cuisine</span><span class="chip">Mise en place</span><span class="chip">Hot kitchen operations</span><span class="chip">Soup, sauce & stock</span><span class="chip">Grilling</span><span class="chip">Frying</span><span class="chip">Baking</span><span class="chip">Kitchen equipment</span><span class="chip">Airline catering</span><span class="chip">HACCP principles</span><span class="chip">FSSAI standards</span><span class="chip">Food safety & hygiene</span><span class="chip">Sanitation</span><span class="chip">Portion control</span><span class="chip">Teamwork</span><span class="chip">Time management</span></div>
- <div class="language-label">Languages</div><div class="skill-list"><span class="chip">English</span><span class="chip">Hindi</span><span class="chip">Punjabi</span></div></div>
-</div></section>
+<section id="safety"><div class="wrap section reveal"><div class="lower-grid">
+<div class="lower-col"><div class="lower-title"><span class="lower-icon">♢</span><h2>Food Safety & Kitchen Standards</h2></div><div class="check-grid">
+<div class="check"><b>✓</b> HACCP principles</div><div class="check"><b>✓</b> FSSAI food safety standards</div><div class="check"><b>✓</b> Personal hygiene</div><div class="check"><b>✓</b> Sanitation procedures</div><div class="check"><b>✓</b> Food quality</div><div class="check"><b>✓</b> Portion requirements</div>
+</div></div>
+<div class="lower-col" id="skills"><div class="lower-title"><span class="lower-icon">⚒</span><h2>Skills</h2></div><div class="skill-list">
+<div class="skill">Continental cuisine</div><div class="skill">Mise en place</div><div class="skill">Hot kitchen operations</div><div class="skill">Soup, sauce & stock</div><div class="skill">Grilling and frying</div><div class="skill">Baking</div><div class="skill">Kitchen equipment</div><div class="skill">Airline catering</div><div class="skill">Food safety & hygiene</div><div class="skill">Sanitation</div><div class="skill">Portion control</div><div class="skill">Teamwork & time management</div></div><p class="muted" style="margin-top:17px"><b style="color:var(--gold)">Languages:</b> English · Hindi · Punjabi</p></div>
+<div class="lower-col"><div class="lower-title"><span class="lower-icon">✦</span><h2>Education & Training</h2></div>
+<div class="edu-item"><div class="year">2019 – 2023</div><h3>Bachelor of Hotel Management</h3><p>DRIEMS School of Hotel Management</p></div>
+<div class="edu-item"><div class="year">2016 – 2018</div><h3>12th Standard (10+2)</h3><p>Khalsa College of Senior Secondary School</p></div>
+<div class="edu-item"><h3>Course for Multi Cuisine Cook</h3><p>City Crown Plaza, Malout</p></div>
+</div></div></div></section>
 
-<section class="section" id="education"><div class="wrap split reveal">
- <div><div class="kicker">05 / Education & training</div><h2 class="section-title">Always<br><em>learning.</em></h2></div>
- <div class="education-list"><article class="edu"><h3>Bachelor of Hotel Management</h3><p>DRIEMS School of Hotel Management<br>2019–2023</p></article><article class="edu"><h3>12th Standard (10+2)</h3><p>Khalsa College of Senior Secondary School<br>2016–2018</p></article><article class="edu"><h3>Course for Multi Cuisine Cook</h3><p>City Crown Plaza, Malout</p></article></div>
-</div></section>
-
-<section class="section" id="contact"><div class="wrap reveal">
- <div class="contact-panel">
-  <div><div class="kicker">06 / Contact</div><h2>Let's make<br>something <em>good.</em></h2><p>Open to connecting about chef and kitchen opportunities.</p><div class="contact-details">Kot Ise Khan, Moga, Punjab – 142043<br>+91 78489 99067<br>Rajwindersmi6@gmail.com</div></div>
-  <form class="contact-form" id="contactForm">
-   <div class="field"><label for="visitorName">Your name</label><input id="visitorName" name="name" type="text" placeholder="Enter your name" autocomplete="name" required></div>
-   <div class="field"><label for="visitorEmail">Email address</label><input id="visitorEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required></div>
-   <div class="field"><label for="visitorMessage">Your message</label><textarea id="visitorMessage" name="message" placeholder="Write a short message..." required></textarea></div>
-   <button class="form-submit" type="submit">Prepare email ↗</button>
-   <p class="form-hint">This form opens your email application with the message prepared. It does not send or store messages on this website.</p>
-  </form>
- </div>
+<section id="contact"><div class="wrap section reveal"><div class="section-kicker">06 / Contact</div><h2 class="section-title">Let's make something good. <span></span></h2><p class="muted">Open to connecting about chef and kitchen opportunities.</p>
+<div class="contact-bar"><div class="contact-item"><strong>✉</strong><a href="mailto:Rajwindersmi6@gmail.com">Rajwindersmi6@gmail.com</a></div><div class="contact-item"><strong>☎</strong><a href="tel:+917848999067">+91 78489 99067</a></div><div class="contact-item"><strong>⌖</strong><span>Kot Ise Khan, Moga, Punjab – 142043</span></div><a class="btn primary" href="mailto:Rajwindersmi6@gmail.com?subject=Chef%20Opportunity">Get in touch ↗</a></div>
 </div></section>
 </main>
-<footer class="wrap"><span>© <span id="year"></span> Rajwinder Singh · Chef portfolio</span><span>Made with care, precision & flavour.</span></footer>
+<footer><div class="wrap footer"><span>© <span id="year"></span> Rajwinder Singh · Chef portfolio</span><span>Made with care, precision & flavour.</span></div></footer>
 <script>
-const menuBtn=document.getElementById('menuBtn');
-const nav=document.getElementById('navLinks');
-menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'Close ✕':'Menu ☰';});
-nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='Menu ☰';}));
+const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close ✕':'Menu ☰'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu ☰'}));
 document.getElementById('year').textContent=new Date().getFullYear();
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.1});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.06});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-document.getElementById('contactForm').addEventListener('submit',event=>{
- event.preventDefault();
- const name=document.getElementById('visitorName').value.trim();
- const email=document.getElementById('visitorEmail').value.trim();
- const message=document.getElementById('visitorMessage').value.trim();
- const subject=encodeURIComponent('Portfolio enquiry from '+name);
- const body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+message);
- window.location.href='mailto:Rajwindersmi6@gmail.com?subject='+subject+'&body='+body;
-});
 </script>
-</body>
-</html>
+</body></html>
